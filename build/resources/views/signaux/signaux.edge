@@ -1,0 +1,93 @@
+@layout('layouts/layout')
+
+@section('content')
+  <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">Envoyer un signal</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                    <div class="form-group breadcrumb-right">
+                        <div class="dropdown">
+                        <a href="/list-signaux" class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle">Liste des signaux</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <!-- Validation -->
+                <section class="bs-validation">
+                    <div class="row">
+                        <!-- Bootstrap Validation -->
+                        <div class="col-md-12 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Information du signal</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form class="needs-validation" novalidate>
+                                        <div class="form-group">
+                                            <label for="select-country1">Paire</label>
+                                            <select class="form-control" id="select-country1" required>
+                                                <option value="">Choisissez la paire</option>
+                                                <option value="usa">AUDUSD</option>
+                                                <option value="uk">AUDCAD</option>
+                                                <option value="france">AUDCHF</option>
+                                                <option value="australia">AUDNZD</option>
+                                                <option value="spain">AUDJPY</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="basic-default-email1">Price d'entrée</label>
+                                            <input type="number" id="basic-default-email1" class="form-control" placeholder="1.32500"  required />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="form-label" for="basic-default-email1">Risque</label>
+                                            <input type="number" id="basic-default-email1" class="form-control" placeholder="0.25%"  required />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="form-label" for="basic-default-email1">Stop loss</label>
+                                            <input type="number" id="basic-default-email1" class="form-control" placeholder="1.32300"  required />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="form-label" for="basic-default-email1">Take profit</label>
+                                            <input type="text" id="basic-default-email1" class="form-control" placeholder="1.32700"  required />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="d-block" for="validationBioBootstrap">Bio</label>
+                                            <textarea class="form-control" id="validationBioBootstrap" name="validationBioBootstrap" rows="3" required>⭕️ Avertissement: Il s'agit d'une alerte à titre d’information sur nos positions. Nous ne sommes pas des conseillers financiers, et ce ne sont pas des conseils financiers. Les bénéfices passés ne garantissent pas les résultats futurs.
+⚠️ Attention à votre money management, les matières premières sont très volatiles et requièrent un certain capital pour ouvrir une position.
+🚨 Spread à ajouter à votre stop loss en fonction de votre broker.
+                                            </textarea>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary">Envoyez le signal</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Bootstrap Validation -->
+
+                    </div>
+                </section>
+                <!-- /Validation -->
+
+            </div>
+        </div>
+    </div>
+@endsection
